@@ -6,7 +6,7 @@ package com.learn.autowired.Injectautowired;
 public class AutowireObject {
 
 //
-//    public static final String CLASS_PATH = "com.learn.autowired.Injectautowired.AutowireObject";
+    public static final String CLASS_PATH = "com.learn.autowired.Injectautowired.AutowireObject";
 
 
     private String name = "autowired";

@@ -16,13 +16,14 @@ public class UserModel implements Serializable ,Cloneable {
     private static final long serialVersionUID = -5809782578272943999L;
 
 
-    public UserModel(String name){
-        this.name = name;
-    }
 
     public UserModel(){
 
     }
+    public UserModel(String name){
+        this.name = name;
+    }
+
 
     public static final String MY_PATH = "com.learn.note.createobject.model.UserModel";
 
