@@ -29,11 +29,17 @@ public class User implements Cloneable{
         this.role = role;
     }
 
+    public BigDecimal getMoney() {
+        return money;
+    }
 
+    public void setMoney(BigDecimal money) {
+        this.money = money;
+    }
 
     @Override
     public String toString(){
-        return "user:" + this.userName + "  role:" + role.getRoleName();
+        return "user:" + this.userName + "  role:" + role.getRoleName() + " monty:" + this.money;
     }
 
 

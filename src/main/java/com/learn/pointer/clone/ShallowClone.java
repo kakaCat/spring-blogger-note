@@ -1,4 +1,6 @@
-package com.learn.pointer;
+package com.learn.pointer.clone;
+
+import com.learn.pointer.Role;
 
 /**
  * Created by JAVA on 2019/6/15.
