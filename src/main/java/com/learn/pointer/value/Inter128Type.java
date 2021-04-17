@@ -11,17 +11,16 @@ public class Inter128Type {
 
 
     public static void main(String[] args) {
-
         Integer aa  = 1;
 
         change(aa);
 
+        System.out.println(aa);
     }
 
     public static void change(Integer aa) {
-
-        aa = aa+100;
-
+        aa = aa+200;
+        System.out.println(aa);
     }
 
 

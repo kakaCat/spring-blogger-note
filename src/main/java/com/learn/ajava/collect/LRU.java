@@ -32,9 +32,7 @@ public class LRU<K,V> extends LinkedHashMap<K, V> implements Map<K, V> {
      */
     @Override
     protected boolean removeEldestEntry(java.util.Map.Entry<K, V> eldest) {
-
         return size() > cacheSize ? true : false;
-
     }
 
     public static void main(String[] args) {

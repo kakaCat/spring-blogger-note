@@ -10,7 +10,7 @@
 // */
 //public class InstanceAutowired {
 //
-//    private Map<String,Object> context = new ConcurrentHashMap();
+//    private static Map<String,Object> context = new ConcurrentHashMap();
 //
 //
 //
@@ -22,7 +22,7 @@
 //
 //        }
 //
-//        return  populateBean();
+////        return  populateBean();
 //
 //    }
 //

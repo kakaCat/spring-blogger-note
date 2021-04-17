@@ -9,7 +9,7 @@ public class User implements Cloneable{
 
     private String userName;
 
-    private Role role;
+    private Role role ;
 
     private BigDecimal money;
 

@@ -1,5 +1,8 @@
 package com.learn.ajava.bolg;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * @ClassName Base
  * @Description TODO

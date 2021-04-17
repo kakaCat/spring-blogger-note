@@ -20,7 +20,7 @@ public class AnnotationAsynListener {
         //../省略逻辑
 
         //输出注册用户信息
-        System.out.println("异步注册信息，用户名："+userDto.getName());
+//        System.out.println("异步注册信息，用户名："+userDto.getName());
     }
 
 }

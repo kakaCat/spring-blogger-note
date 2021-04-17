@@ -15,12 +15,14 @@ public class StringType {
 
 
         change(aa);
-
+        System.out.println(aa);
     }
 
     public static void change(String aa) {
 
         aa = "0002";
+        System.out.println( "change： "+aa);
+
 
     }
 
