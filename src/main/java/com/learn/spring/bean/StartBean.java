@@ -4,6 +4,8 @@ import com.learn.springboot.Application;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import java.util.HashMap;
+
 /**
  * @ClassName StartBean
  * @Description Bean
@@ -15,6 +17,8 @@ public class StartBean {
 
 
     public static void main(String[] args) {
+        new HashMap<>();
+
         ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);
         String[] beanDefinitionNames = run.getBeanDefinitionNames();
     }

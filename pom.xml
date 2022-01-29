@@ -11,38 +11,89 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.4.RELEASE</version>
+        <version>2.2.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Dalston.SR4</spring-cloud.version>
-        <fastjson.version>1.2.55</fastjson.version>
+        <aries-boot.version>2.1.8-SNAPSHOT</aries-boot.version>
+        <aries-cloud.version>2.1.8-SNAPSHOT</aries-cloud.version>
+
+        <com-alibaba.version>1.1.10</com-alibaba.version>
+
+        <jedis.version>2.10.2</jedis.version>
+        <redisson.version>3.9.0</redisson.version>
+        <mybatis-spring-boot.version>1.3.1</mybatis-spring-boot.version>
+        <mysql.version>5.1.47</mysql.version>
+        <pagehelper.version>5.1.8</pagehelper.version>
+        <mybatis-plus-boot-starter.version>3.1.2</mybatis-plus-boot-starter.version>
+
     </properties>
 
+
     <dependencies>
+        <!-- 白羊座-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
+            <groupId>com.ziroom.boot</groupId>
+            <artifactId>aries-boot-starter-web</artifactId>
+            <version>${aries-boot.version}</version>
+        </dependency>
+        <!--白羊座3.0-->
+        <dependency>
+            <groupId>com.ziroom.yzo2o</groupId>
+            <artifactId>aries-cloud-yzo2o-starter-bizz</artifactId>
+            <version>0.0.2-SNAPSHOT</version>
         </dependency>
 
+
+        <!--redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>${redisson.version}</version>
+        </dependency>
+
+        <!--    <dependency>-->
+        <!--      <groupId>org.mybatis.spring.boot</groupId>-->
+        <!--      <artifactId>mybatis-spring-boot-starter</artifactId>-->
+        <!--      <version>${mybatis-spring-boot.version}</version>-->
+        <!--    </dependency>-->
+
+        <!--    <dependency>-->
+        <!--      <groupId>com.github.pagehelper</groupId>-->
+        <!--      <artifactId>pagehelper</artifactId>-->
+        <!--      <version>${pagehelper.version}</version>-->
+        <!--    </dependency>-->
+
+        <!-- druid -->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${com-alibaba.version}</version>
+        </dependency>
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+            <version>${mysql.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
         </dependency>
 
         <dependency>
@@ -51,27 +102,43 @@
             <scope>test</scope>
         </dependency>
 
+        <!--swagger-ui -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.20</version>
-            <scope>provided</scope>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
         </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>1.9.6</version>
+        </dependency>
+
     </dependencies>
 
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>
